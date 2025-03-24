@@ -15,7 +15,25 @@
     <div>First Name: <span id="loggedUserFName"></span></div>
     <div>Last Name: <span id="loggedUserLName"></span></div>
     <div>Email: <span id="loggedUserEmail"></span></div>
-    <p><a href="login.html"> logout</a></p>
+    <p><a style="color:red" href="login.html"> logout</a></p>
+    <script>
+        const loggedUserFName = document.getElementById("loggedUserFName");
+        const loggedUserLName = document.getElementById("loggedUserLName");
+        const loggedUserEmail = document.getElementById("loggedUserEmail");
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const userData = user;
+                loggedUserFName.innerText = userData.firstName;
+                loggedUserLName.innerText = userData.lastName;
+                loggedUserEmail.innerText = userData.email;
+            } else {
+                console.log("User not logged in");
+                window.location.href = "login.html";
+            }
+        });
+    </script>
 </body>
 
 </html>
+

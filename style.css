@@ -8,6 +8,7 @@ body {
     height: 100vh;
     margin: 0;
     flex-direction: column;
+    color: #fff;
 }
 
 .container {
@@ -22,7 +23,6 @@ body {
 
 h2 {
     margin-bottom: 20px;
-    color: #333;
     font-weight: 600;
 }
 
@@ -35,7 +35,6 @@ input {
     font-size: 16px;
     transition: 0.3s;
     background-color: #fff;
-    color: #333;
 }
 
 input:focus {
@@ -45,8 +44,7 @@ input:focus {
 }
 
 button, input[type="submit"] {
-    background: #ff6b6b;
-    color: white;
+    background: red;
     border: none;
     padding: 12px;
     width: 100%;
@@ -62,11 +60,9 @@ button:hover, input[type="submit"]:hover {
 
 p {
     font-size: 14px;
-    color: #ccc;
 }
 
 a {
-    color: #ff6b6b;
     text-decoration: none;
     font-weight: bold;
 }
@@ -81,3 +77,4 @@ a:hover {
     background: linear-gradient(to right, #2c2c2e 50%, #3a3a3c 50%);
     border-top: 4px solid #ff6b6b;
 }
+
